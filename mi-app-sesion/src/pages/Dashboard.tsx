@@ -1,11 +1,10 @@
-// src/pages/Dashboard.tsx
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Eliminamos la sesión
+    localStorage.removeItem('token');
     navigate('/login', { replace: true });
   };
 
